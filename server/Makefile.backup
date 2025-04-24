@@ -1,0 +1,37 @@
+CC = gcc
+CFLAGS = -Wall -g
+
+# 目标文件
+TARGETS = server web_server open close save withdraw query transfer
+
+all: $(TARGETS)
+
+# 原始银行系统服务器
+server: server.c
+	$(CC) $(CFLAGS) -o server server.c
+
+# HTTP网络服务器
+web_server: web_server.c
+	$(CC) $(CFLAGS) -o web_server web_server.c
+
+# 各个业务模块（如果您已经有这些文件）
+open: open.c
+	$(CC) $(CFLAGS) -o open open.c
+
+close: close.c
+	$(CC) $(CFLAGS) -o close close.c
+
+save: save.c
+	$(CC) $(CFLAGS) -o save save.c
+
+withdraw: withdraw.c
+	$(CC) $(CFLAGS) -o withdraw withdraw.c
+
+query: query.c
+	$(CC) $(CFLAGS) -o query query.c
+
+transfer: transfer.c
+	$(CC) $(CFLAGS) -o transfer transfer.c
+
+clean:
+	rm -f $(TARGETS)

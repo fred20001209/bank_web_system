@@ -43,13 +43,13 @@ int init(void) // 用msgget函数创建两个消息队列。一个用来存放�
 	key_t KEY_RESPOND = ftok("/home", 3); // 服务端键值
 
 	printf("服务器初始化...\n");
-	if ((g_reqid = msgget(KEY_REQUEST, IPC_CREAT | IPC_EXCL | 0777)) == -1) // 如果消息队列不存在，则创建，返回消息队列的ID；如果消息对列存在，则返回-1
+	if ((g_reqid = msgget(KEY_REQUEST, IPC_CREAT | IPC_EXCL | 0600)) == -1) // 如果消息队列不存在，则创建，返回消息队列的ID；如果消息对列存在，则返回-1
 	{
 		perror("msgget"); // 消息队列创建失败，返回-1
 		return -1;
 	}
 	printf("创建请求消息队列成功！\n");
-	if ((g_resid = msgget(KEY_RESPOND, IPC_CREAT | IPC_EXCL | 0777)) == -1)
+	if ((g_resid = msgget(KEY_RESPOND, IPC_CREAT | IPC_EXCL | 0600)) == -1)
 	{
 		perror("msgget");
 		return -1;

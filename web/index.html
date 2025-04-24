@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>银行业务管理系统</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>银行业务管理系统</h1>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="open">开户</button>
+            <button class="tab-btn" data-tab="close">销户</button>
+            <button class="tab-btn" data-tab="save">存款</button>
+            <button class="tab-btn" data-tab="withdraw">取款</button>
+            <button class="tab-btn" data-tab="query">查询</button>
+            <button class="tab-btn" data-tab="transfer">转账</button>
+        </div>
+
+        <!-- 开户 -->
+        <div class="tab-pane active" id="open"></div>
+
+        <!-- 销户 -->
+        <div class="tab-pane" id="close"></div>
+
+        <!-- 存款 -->
+        <div class="tab-pane" id="save"></div>
+
+        <!-- 取款 -->
+        <div class="tab-pane" id="withdraw"></div>
+
+        <!-- 查询 -->
+        <div class="tab-pane" id="query"></div>
+
+        <!-- 转账 -->
+        <div class="tab-pane" id="transfer"></div>
+
+        <footer>
+            <p>© 2025 银行业务管理系统 版权所有</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
